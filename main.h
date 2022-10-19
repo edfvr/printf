@@ -26,5 +26,7 @@ int organize(const char *format, fxns_t functions[], va_list list);
 int print_character(va_list);
 int print_string(va_list);
 int print_percent_sym(va_list);
+int print_int(va_list);
+int print_binary(char *dest, va_list args);
 
 #endif /*MAIN_H*/
