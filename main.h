@@ -28,5 +28,6 @@ int print_string(va_list);
 int print_percent_sym(va_list);
 int print_int(va_list);
 int print_binary(char *dest, va_list args);
+int print_unsigned(unsigned int n);
 
 #endif /*MAIN_H*/
