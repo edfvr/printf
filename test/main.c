@@ -1,29 +1,3 @@
-# 0x11. C - printf
-
-## Description
-`printf` is a C function that sends formatted output to stdout
-
-### Prototype
-`int _printf(const char *format, ...);`
-
-`format` contains the string to be written to `stdout`
-
-|   Specifier   |   Description   |
-|  -----------  |   -----------   |
-|      `c`      |    character    |
-|      `s`      |     string      |
-|      `%`      |    character    |
-|      `d`      | decimal integer |
-|      `i`      | decimal integer |
-|      `b`      | binary integer |
-|      `u`      | unsigned integer |
-|      `o`      | octal integer |
-|      `x`      | hexadecimal integer lowercase|
-|      `X`      | hexadecimal integer uppercase|
-
-## Usage
-Test using:
-```
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
@@ -67,16 +41,4 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     return (0);
-}
-```
-
-### Compilation
-Compile using:
-```
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
-```
-
-## Authors
-- [Edmund Sagoe  @edfvr](https://github.com/edfvr)
-
-- [Oluchi Izunobi  @Luchy4real](https://github.com/Luchy4real)
+}~
