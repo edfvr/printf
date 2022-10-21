@@ -8,7 +8,7 @@ int _printf(const char *format, ...)
 {
 	int chars;
 	fxns_t functions[] = {
-		{"c", print_character}, {"s", print_string}, {"%", print_percent_sym}, {"d", print_int}, {"i", print_int}, {"b", print_binary}, {"u", print_unsigned}, {"o", print_octal}, {"x", print_hexadecimal}, {"X", print_HEX}, {NULL, NULL}
+		{"c", print_character}, {"s", print_string}, {"%", print_percent_sym}, {"d", print_integer}, {"i", print_integer}, {"b", print_binary}, {"u", print_unsigned_int}, {"o", print_octal}, {"x", print_hexadecimal}, {"X", print_HEX}, {"r", print_reversed}, {"R", rot13}, {NULL, NULL}
 	};
 	va_list arg_list;
 

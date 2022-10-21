@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <unistd.h>
 
 /**
@@ -44,30 +45,6 @@ int _strlen(char *s)
 }
 
 /**
- * rev_string - reverses a string
- * @s : pointer to s
- */
-void *rev_string(char *s)
-{
-	char c;
-	int i, x = 0, y = 0;
-
-	while (s[x] != '\0')
-	{
-		x++;
-	}
-
-	y = x - 1;
-
-	for (i = 0; i < x / 2; i++)
-	{
-		c = s[i];
-		s[i] = s[y];
-		s[y--] = c;
-	}
-}
-
-/**
  * _memcpy - copies n bytes from memory area src to memory area dest
  * @dest : memory area
  * @src : memory area bytes are copied from
@@ -76,11 +53,43 @@ void *rev_string(char *s)
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+        unsigned int i;
 
-	for (i = 0; i < n; i++)
+        for (i = 0; i < n; i++)
+        {
+                dest[i] = src[i];
+        }
+        return (dest);
+}
+
+/**
+ * rev_string - reverses a string in place
+ * @s: string to reverse
+ * Return: A pointer to a character
+ */
+char *rev_string(char *s)
+{
+	int len;
+	int head;
+	char tmp;
+	char *dest;
+
+	len = 0;
+	while (s[len] != '\0')
 	{
-		dest[i] = src[i];
+		len++;
+	}
+
+	dest = malloc(sizeof(char) * len + 1);
+	if (dest == NULL)
+		return (NULL);
+
+	_memcpy(dest, s, len);
+	for (head = 0; head < len; head++, len--)
+	{
+		tmp = dest[len - 1];
+		dest[len - 1] = dest[head];
+		dest[head] = tmp;
 	}
 	return (dest);
 }
@@ -104,7 +113,7 @@ unsigned int base_len(unsigned int n, int base)
 }
 
 /**
- * hex_check - 
+ * hex_check
  * @n : number to be changed
  * @c : character which determines
  * 	the hex function to use
@@ -126,4 +135,18 @@ int hex_check(int n, char c)
 		return (Hex[n]);
 	}
 	return (0);
+}
+
+/**
+ * write_base - sends chars to stdout
+ * str : string
+ */
+void write_base(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
 }

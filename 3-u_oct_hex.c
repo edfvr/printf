@@ -5,7 +5,7 @@
  * @list : list of arguments
  * Return : number of unsigned numbers
  */
-int unsigned_int(va_list list)
+int print_unsigned_int(va_list list)
 {
 	unsigned int n;
 
@@ -63,7 +63,7 @@ int print_octal(va_list list)
 	{
 		return (-1);
 	}
-	_putchar(str_rev);
+	write_base(str_rev);
 	free(oct);
 	free(str_rev);
 	return (length);
@@ -119,7 +119,7 @@ int print_hexadecimal(va_list list)
 	{
 		return (-1);
 	}
-	_putchar(rev_hex);
+	write_base(rev_hex);
 	free(hex_rep);
 	free(rev_hex);
 	return (length);
@@ -175,7 +175,7 @@ int print_HEX(va_list list)
 	{
 		return (-1);
 	}
-	_putchar(rev_hex);
+	write_base(rev_hex);
 	free(hex_rep);
 	free(rev_hex);
 	return (length);
