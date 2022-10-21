@@ -2,9 +2,9 @@
 /**
  *
  */
-int print_binary(char *dest, va_list args)
+int print_binary(char *dest, va_list list)
 {
-	unsigned int i = va_arg(args, unsigned int);
+	unsigned int i = va_arg(list, unsigned int);
 	int length, x = 1;
 	unsigned int tmp;
 	tmp = i;
