@@ -77,6 +77,6 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 ```
 
 ## Authors
-- [Edmund Sagoe  @edfvr](https://github.com/edfvr)
+- Edmund Sagoe [@edfvr](https://github.com/edfvr)
 
-- [Oluchi Izunobi  @Luchy4real](https://github.com/Luchy4real)
+- Oluchi Izunobi [@Luchy4real](https://github.com/Luchy4real)
