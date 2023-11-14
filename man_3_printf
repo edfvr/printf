@@ -1,0 +1,73 @@
+.TH man 3 "14 November 2023" "1.0" "_printf man page"
+.SH NAME
+.B _printf
+- format and print data.
+.SH SYNOPSIS
+_printf FORMAT [ARGUMENT]...
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT:
+
+\"     double quote.
+
+\\     backslash.
+
+\n     new line.
+
+\r     carriage return.
+
+\t     horizontal tab.
+
+%%     a single %.
+
+.SH CONVERSION CHARACTERS
+.B The conversion specifiers and their meanings are:
+.IP -b 
+The unsigned int argument is converted to binary.
+
+.IP -d,i
+The int argument is converted to signed decimal notation.
+
+.IP -c
+The int argument is converted to an unsigned char, and the resulting character is written.
+
+.IP -o,u,x,X
+The unsigned int argument is converted to ( ) notation:
+
+unsigned octal: (o).
+
+unsigned decimal: (u).
+
+unsigned hexadecimal: (x and X).
+
+.IP -s
+Characters from the array are written up to (but not including) a terminating null byte ('\0').
+    
+.IP -S 
+Characters from the array are written up to (but not including) a terminating null byte ('\0').
+
+Not include characters (0 < ASCII value < 32 or >= 127), are printed \x, , followed by the ASCII code value in hexadecimal (upper case - always 2 characters).
+
+.IP -p
+The void * pointer argument is printed in hexadecimal (as if by %#x or %#lx).
+
+.SH EXAMPLES
+
+.IP - Print a string.
+_printf("This is a string");
+_printf("%s\n", "I am a string too!");
+
+.IP - Print a character.
+_printf("Character:[%c]\n", 'H');
+
+.IP - Print an integer.
+_printf("%d, %i\n", 2, 5);
+
+.SH SEE ALSO
+.I printf(1),
+.I printf(3).
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHOR
+Philip Owusu Koranteng & #######
