@@ -1,0 +1,6 @@
+# Executables
+*.out
+*.exe
+
+# main.c
+main.c
