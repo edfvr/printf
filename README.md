@@ -97,5 +97,5 @@ alex@ubuntu:~/c/printf$
 * If the task does not specify what to do with an edge case, do the same as printf
 
 ## Authors 
-Philip Owusu Koranteng (https://github.com/Piipip)
-Edmund Sagoe (https://github.com/edfvr)
+* Philip Owusu Koranteng (https://github.com/Piipip)
+* Edmund Sagoe (https://github.com/edfvr)
