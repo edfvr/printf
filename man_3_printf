@@ -70,4 +70,4 @@ _printf("%d, %i\n", 2, 5);
 No known bugs.
 
 .SH AUTHOR
-Philip Owusu Koranteng & #######
+Philip Owusu Koranteng & Edmund Sagoe
