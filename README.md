@@ -1,7 +1,7 @@
 # 0x11. C - printf
 
 ## Aims
-Create printf function in C
+Create a printf function in C
 
 ## Authorized functions and macros
 * `write (man 2 write)`
