@@ -48,6 +48,10 @@ int _printf(const char *format, ...)
 				write(1, "%", 1);
 				char_count++;
 			}
+			else if (*format == 'd' || *format == 'i')
+			{
+				char_count += print_int(argument_list);
+			}
 		}
 		else
 		{
