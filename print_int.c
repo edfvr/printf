@@ -28,9 +28,8 @@ int print_number(int n)
 
 		divisor = 1;
 
-		for (i = 1; i < num_of_digits; i++) {
+		for (i = 1; i < num_of_digits; i++)
 			divisor *= 10;
-		}
 
 		while (divisor > 0)
 		{
@@ -55,7 +54,7 @@ int print_int(va_list argument_list)
 	int n = va_arg(argument_list, int);
 	int char_count = 0;
 
-	if ( n < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		char_count++;
